@@ -5,19 +5,25 @@
     box-sizing: border-box;
 }
 
+/* Dark theme background */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    color: #333;
-    padding-bottom: 50px; /* Add space for footer */
+    background: linear-gradient(120deg, #2c3e50 0%, #4ca1af 100%);
+    color: #ecf0f1;
+    padding-bottom: 60px; /* Add space for footer */
 }
 
+/* Header styling */
 header {
     background: linear-gradient(90deg, #007BFF 0%, #0056b3 100%);
     color: #fff;
-    padding: 20px 0;
+    padding: 0px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -51,32 +57,35 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
+/* Main content styling */
 main {
-    padding: 40px 20px;
+    padding: 80px 20px 20px; /* Add space for fixed header */
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
 }
 
+/* Section styling */
 section {
-    background: #fff;
+    background: rgba(44, 62, 80, 0.9);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
     margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: #0056b3;
+    font-size: 2rem;
+    color: #fff;
 }
 
+/* Form styling */
 form {
     display: grid;
     gap: 15px;
@@ -85,7 +94,7 @@ form {
 input, textarea, button {
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -96,19 +105,22 @@ input:focus, textarea:focus, button:focus {
     outline: none;
 }
 
+/* Button styling */
 button {
     background: linear-gradient(90deg, #007BFF 0%, #0056b3 100%);
     color: #fff;
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 button:hover {
     background: linear-gradient(90deg, #0056b3 0%, #003d82 100%);
+    transform: scale(1.05);
 }
 
+/* Itinerary and Expense list styling */
 #itinerary-list, #expense-list {
     margin-top: 20px;
 }
@@ -118,7 +130,7 @@ button:hover {
     padding: 15px;
     border-left: 5px solid #007BFF;
     margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -126,6 +138,7 @@ button:hover {
     margin-bottom: 5px;
 }
 
+/* Footer styling */
 footer {
     text-align: center;
     padding: 15px;
@@ -133,4 +146,35 @@ footer {
     color: #fff;
     position: fixed;
     bottom: 0;
-    w
+    width: 100%;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    main {
+        padding: 80px 10px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 0.8rem;
+    }
+}
