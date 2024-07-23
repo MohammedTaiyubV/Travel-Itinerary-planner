@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Itinerary Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#itinerary">My Itinerary</a></li>
+                <li><a href="#expenses">Expenses</a></li>
+                <li><a href="#friends">Share with Friends</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Welcome to Travel Itinerary Planner</h2>
+            <p>Plan your trips, manage expenses, and share your itinerary with friends.</p>
+        </section>
+        
+        <section id="itinerary">
+            <h2>My Itinerary</h2>
+            <form id="itinerary-form">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+                
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+                
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+                
+                <label for="activities">Activities:</label>
+                <textarea id="activities" name="activities" required></textarea>
+                
+                <button type="submit">Add to Itinerary</button>
+            </form>
+            
+            <div id="itinerary-list">
+                <!-- Dynamic content goes here -->
+            </div>
+        </section>
+        
+        <section id="expenses">
+            <h2>Manage Expenses</h2>
+            <form id="expense-form">
+                <label for="expense-description">Description:</label>
+                <input type="text" id="expense-description" name="expense-description" required>
+                
+                <label for="expense-amount">Amount:</label>
+                <input type="number" id="expense-amount" name="expense-amount" required>
+                
+                <button type="submit">Add Expense</button>
+            </form>
+            
+            <div id="expense-list">
+                <!-- Dynamic content goes here -->
+            </div>
+        </section>
+        
+        <section id="friends">
+            <h2>Share with Friends</h2>
+            <form id="share-form">
+                <label for="friend-email">Friend's Email:</label>
+                <input type="email" id="friend-email" name="friend-email" required>
+                
+                <button type="submit">Share Itinerary</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Travel Itinerary Planner</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
