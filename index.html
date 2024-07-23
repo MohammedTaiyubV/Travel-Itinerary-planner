@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Itinerary Planner</title>
+    <title>Ultimate Travel Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Travel Itinerary Planner</h1>
+        <h1>Ultimate Travel Planner</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#itinerary">My Itinerary</a></li>
                 <li><a href="#expenses">Expenses</a></li>
                 <li><a href="#friends">Share with Friends</a></li>
+                <li><a href="#weather">Weather</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
         <section id="home">
-            <h2>Welcome to Travel Itinerary Planner</h2>
+            <h2>Welcome to Ultimate Travel Planner</h2>
             <p>Plan your trips, manage expenses, and share your itinerary with friends.</p>
         </section>
         
@@ -74,10 +75,24 @@
                 <button type="submit">Share Itinerary</button>
             </form>
         </section>
+        
+        <section id="weather">
+            <h2>Weather Forecast</h2>
+            <form id="weather-form">
+                <label for="weather-location">Location:</label>
+                <input type="text" id="weather-location" name="weather-location" required>
+                
+                <button type="submit">Get Weather</button>
+            </form>
+            
+            <div id="weather-result">
+                <!-- Weather data will be displayed here -->
+            </div>
+        </section>
     </main>
     
     <footer>
-        <p>&copy; 2024 Travel Itinerary Planner</p>
+        <p>&copy; 2024 Ultimate Travel Planner</p>
     </footer>
     
     <script src="script.js"></script>
